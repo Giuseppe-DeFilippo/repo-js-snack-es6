@@ -40,4 +40,10 @@ function numrandom(){
     });
 
     let squadre2 = squadre.map(squadre => ({ nome: squadre.nome, falliSubiti: squadre.falliSubiti }));
-    console.log(squadre2)
+    console.log(squadre2);
+
+    let risultati = "";
+    squadre2.forEach(squadra => {
+        risultati += squadra.nome + " " + squadra.falliSubiti + "<br>";
+    });
+    stampa.innerHTML = risultati;
